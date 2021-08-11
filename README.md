@@ -1,3 +1,3 @@
 # vue-mf
 
-A project built to explain Micro frontends and it can be used in a Vue project.
+A project built to explain Micro frontends and how it can be used in a Vue project.
