@@ -38,10 +38,12 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "starter",
+      name: "Company",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./Header": "./src/Header"
+      },
       shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({
