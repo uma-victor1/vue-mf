@@ -38,9 +38,11 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new ModuleFederationPlugin({
-      name: "starter",
+      name: "Shop",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        Company: "Company@http://localhost:8080/remoteEntry.js"
+      },
       exposes: {},
       shared: require("./package.json").dependencies,
     }),

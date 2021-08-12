@@ -1,12 +1,21 @@
 <template>
   <div>
       <header>
-          App Header
+          <h2> App Header</h2>
+          <p>items: {{cartCount}}</p>
       </header>
   </div>
 </template>
 
-
+<script>
+export default {
+    computed: {
+        cartCount() {
+            return this.$store.state.cartItems
+        }
+    },
+}
+</script>
 
 <style>
 div {
@@ -14,6 +23,7 @@ div {
 }
 header {
     width: full;
+    display: flex;
     height: 5em;
     background-color: #5CDB95;
     color: #05386B;
@@ -21,5 +31,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+p {
+    margin-left: 4em;
 }
 </style>

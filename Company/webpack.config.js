@@ -42,7 +42,7 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./Header": "./src/Header"
+        "./Header": "./src/Header",
       },
       shared: require("./package.json").dependencies,
     }),
